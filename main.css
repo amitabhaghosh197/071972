@@ -1,0 +1,399 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*-- Reset CSS by Eric Meyor --*/
+    /**
+    * html5doctor.com Reset Stylesheet v1.6.1 (http://html5doctor.com/html-5-reset-stylesheet/)
+    * Richard Clark (http://richclarkdesign.com)
+    * http://cssreset.com
+    */
+    html, body, div, span, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    abbr, address, cite, code,
+    del, dfn, em, img, ins, kbd, q, samp,
+    small, strong, sub, sup, var,
+    b, i,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, figcaption, figure,
+    footer, header, hgroup, menu, nav, section, summary,
+    time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    }
+    body {
+    line-height:1;
+    }
+    article,aside,details,figcaption,figure,
+    footer,header,hgroup,menu,nav,section {
+    display:block;
+    }
+    nav ul {
+    list-style:none;
+    }
+    blockquote, q {
+    quotes:none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+    content:'';
+    content:none;
+    }
+    a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    }
+    /* change colours to suit your needs */
+    ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+    }
+    /* change colours to suit your needs */
+    mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+    }
+    del {
+    text-decoration: line-through;
+    }
+    abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+    }
+    table {
+    border-collapse:collapse;
+    border-spacing:0;
+    }
+    /* change border colour to suit your needs */
+    hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+    }
+    input, select {
+    vertical-align:middle;
+    }
+
+/*-----------Other Defaults---------------------*/
+
+img
+{
+	width: 100%;
+	height: auto;
+	outline: 0 none;
+	border: none;
+	
+	}
+body
+{
+	margin: 0;
+	padding:0;
+	}
+	
+	
+*{
+	position: relative;
+	
+	
+	}
+	
+	
+*, *:before, *:after
+{
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	
+	
+	}
+
+/*-----------Slider & Flex slider----------------------------------------------*/	
+	
+.slider-container /*----------[Keep the slider-container overflow: hidden; ] to avoid scrollbar x - axis since flex-viewport is visible--------------------------------*/
+{
+	width: 100%;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden ;
+	
+	
+	
+	}
+	
+.flexslider /*-----Styling of flexslider class to avoid the box-shadow elements---------------------------------*/
+{
+	background: none !important;
+	border-radius: none !important;
+	-moz-border-radius: none !important;
+	-webkit-border-radius: none !important;
+	-moz-box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+	border: none !important;
+	
+	
+	}
+	
+	
+	/*-----Set the slider div width----------------------------*/
+#slider 
+{
+	max-width: 1000px;
+	margin: 0 auto;
+	opacity: 1;
+	
+	}
+	
+#slider .slides li {
+  position: relative;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: url(filters.svg#grayscale); /*------for filter hack in mozilla otherwise grayscale will not work in Mozilla--------------------------*/
+  opacity: 0.4;
+}
+
+#slider .slides li img {
+  width: 100.1%;
+}
+
+/*----------Flex Viewport styling to see the previous and next slides[keep it overflow visible]----------------------------*/
+#slider .flex-viewport 
+
+{
+  overflow: visible !important;
+ 
+}
+
+
+#slider .slides li.flex-active-slide /*-----To bring the color in the Active flex slide---------------------------------------*/
+  {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%) ;
+  filter: grayscale(0%) ;
+  filter: none !important;
+  opacity: 1;
+ 
+}
+
+/*-----------Styling Flex control nav  Rounded shape control buttons-------------------------*/
+ .flex-control-nav
+{
+	bottom: 20px !important;
+	}
+	
+.flex-control-paging li a
+{
+	
+	/*background: #61284b !important;
+	background: rgba(97,40,75,0.5) !important;
+	*/
+	}
+
+.flex-control-paging li a.flex-active 
+{
+	background: #61284b !important;
+	background: rgba(97,40,75,0.9) !important;
+	
+	
+	}
+	
+
+/*-------Styling Flex Direction Navs-----------------------------------*/
+ #slider .flex-direction-nav a
+	{
+	top: 50% ;
+	margin-top: -230px;
+	position: absolute;
+	display:block;
+	border-radius: 4px;
+		}
+	
+ #slider .flex-direction-nav li a
+	{
+		display:block;
+		
+		}
+		
+
+#slider .flex-direction-nav .flex-prev
+
+{
+	
+	width: 40px;
+	height:40px;
+	background: #595959;
+	background: rgba(89,89,89,0.75);
+	left: -50px;
+	opacity: 0.75;
+	-moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+	}
+	
+
+	
+#slider .flex-direction-nav .flex-next
+
+{
+	
+	width: 40px;
+	height:40px;
+	background: #595959;
+	background: rgba(89,89,89,0.75);
+	opacity: 1;
+	right:-50px;
+	opacity: 0.75;
+	-moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+	
+	}
+	
+	
+	
+#slider .flex-direction-nav .flex-prev, #slider .flex-direction-nav .flex-next
+{
+	padding: 8px 11px;
+	
+	}
+	
+#slider .flex-direction-nav .flex-prev:hover, #slider .flex-direction-nav .flex-next:hover
+	
+
+{
+	background: rgba(89,89,89,1.0);
+
+}
+
+
+
+
+/*-----------Other Front Page Styles------------------------------------------------*/
+
+
+.container
+{
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	
+	}
+
+
+.header-top
+{
+	
+	max-width: 100%;
+	background: #61284b;
+	height: 50px;
+	
+	
+	}
+
+.header-bottom, .section1
+{
+	background: #fff;
+	
+	}
+
+.section2, .section4
+{
+	background: #61284b;
+	
+	}
+
+
+
+.section5
+{
+	background: #2b2b2b;
+	
+	}
+
+
+
+
+
+	
+
+/*-----------Responsive Here only mobile view enabled-----------------------------------*/
+
+@media (max-width: 1150px)
+	{
+	}
+
+
+
+@media (max-width: 850px)
+	{
+	}
+	
+	
+	@media (max-width: 550px)
+	{
+	
+	.container
+	{width:250px;}
+	
+	.header-top
+	{height: auto;}
+	
+    .slider-container
+	{  
+	     
+		max-width: 450px;
+		margin-left: auto;
+		margin-right:auto;
+		overflow: hidden !important;}
+	
+	
+		#slider{ width: 250px;}
+		#slider .flex-direction-nav .flex-prev
+		{left: 0px;}
+		
+		#slider .flex-direction-nav .flex-next
+		{right: 0px;}
+		
+		 #slider .flex-direction-nav a
+	{
+	top: 50% ;
+	margin-top: -80px;
+	
+	}
+	
+	
+		
+		}
